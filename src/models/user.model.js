@@ -64,10 +64,10 @@ userSchema.methods.generatAccessToken = function () {
             _id: this._id,
             email: this.email,
             userName: this.userName,
-            fullName:this.fullName
+            fullName: this.fullName
         },
         process.env.ACCESS_TOKEN_SECRECT,
-        {expiresIn:ACCESS_TOKEN_EXPIRY}
+        { expiresIn: ACCESS_TOKEN_EXPIRY }
     )
 }
 userSchema.methods.generatRefrenshToken = function () {
@@ -76,7 +76,7 @@ userSchema.methods.generatRefrenshToken = function () {
             _id: this._id,
         },
         process.env.REFRESH_TOKEN_SECRECT,
-        {expiresIn:REFRESH_TOKEN_EXPTRY}
+        { expiresIn: REFRESH_TOKEN_EXPTRY }
     )
 }
 
